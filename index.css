@@ -5,8 +5,14 @@
   body {
     font-size: 1.25rem;
     background-color: #f6f8fa;
+
+    
   }
   
   td {
     line-height: 3rem;
   }
+  #acc{
+    background-image: url(assests/bg5.jpg);
+  }
+  

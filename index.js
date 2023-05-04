@@ -49,7 +49,7 @@ function loadTable() {
         '<input id="id" type="hidden">' +
         '<input id="AccNo" class="swal2-input" placeholder="AccNO">' +
         '<input id="AccHolderName" class="swal2-input" placeholder="AccHolderName">' +
-        '<input id="AccType" class="swal2-input" placeholder="AccType">' +
+        '<select name="country" id="AccType"class="swal2-input" style="width:270px"><option value="Savings">Savings</option><option value="Current">Current</option>'+
         '<input id="Address" class="swal2-input" placeholder="Address">'+
         '<input id="Balance" class="swal2-input" placeholder="Balance">',
       preConfirm: () => {
@@ -105,18 +105,17 @@ function loadTable() {
             '">' +
             '<input id="AccNo" class="swal2-input" placeholder="AccNo" value="' +
             objects["AccNo"] +
-            '"><br><br>' +
+            '"><br>' +
             '<input id="AccHolderName" class="swal2-input" placeholder="AccHolderName" value="'+
             objects["AccHolderName"] +
-            '"</select><br><br>' +
-            '<label>AccType</label><select name="country" id="AccType" style="width:160px"><option value="Savings">Savings</option><option value="Current">Current</option>'+
+            '"</select><br>' +
+            '<select name="country" id="AccType"class="swal2-input" style="width:270px"><option value="Savings">Savings</option><option value="Current">Current</option>'+
             objects["AccType"] +
             '"</select><br>'+
-            '<br><textarea placeholder=address id="Address" type=time class="swal2-input" value="' +
+            '<input placeholder=address id="Address"  class="swal2-input" value="' +
             objects["Address"] +
-            '"></textarea>' +
-            
-            '<br><input id="Balance" class="swal2-input" placeholder="Balance" value="' +
+            '"></input>' +
+            '<input id="Balance" class="swal2-input" placeholder="Balance" value="' +
             objects["Balance"] +
             '">',
           preConfirm: () => {
@@ -145,7 +144,7 @@ function loadTable() {
         AccType: AccType,
         Address: Address,      
         Balance:Balance,
-        AccHolderPhoto: "https://logitrustvoyages.com/logitrustblog/wp-content/uploads/2020/07/street_food.jpeg",
+        AccHolderPhoto:  "https://www.melivecode.com/users/1.png",
       })
     );
     xhttp.onreadystatechange = function () {
@@ -194,9 +193,8 @@ function loadTable() {
       const Balance= document.getElementById("Balance").value;
       //regular expression
       const nameCheck = /^[a-zA-Z\s]{2,20}$/;
-      const numCheck = /^[0-9]{10}$/;
-      const EMailIdCheck = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/;
-  
+      const numCheck = /^[0-9]{6}$/;
+      
   
       if (AccNo == "" || AccHolderName == "" || Address == "" || AccType == "" || Balance== "") {
           Swal.fire({
@@ -221,11 +219,11 @@ function loadTable() {
       }
   
   
-      if (!Balance.match(numCheck)) {
+      if (!AccNo.match(numCheck)) {
   
           Swal.fire({
               title: "Invalid Input",
-              text: "Contact Number should contain 10 digits",
+              text: "Enter valid Acc No",
               icon: "error",
               showConfirmButton: true,
   
@@ -233,19 +231,7 @@ function loadTable() {
           return false;
   
       }
-      if (!Address.match(EMailIdCheck)) {
-  
-          Swal.fire({
-              title: "Invalid Input",
-              text: "Enter a valid email",
-              icon: "error",
-              showConfirmButton: true,
-  
-          })
-          return false;
-  
-      }
-      if (AccNo.match(nameCheck) && AccType.match(numCheck) && EMailId.match(EMailIdCheck)) {
+      if (AccNo.match(numCheck) && AccHolderName.match(nameCheck)) {
           Swal.fire({
               title: "Successfully Created",
               icon: "success",

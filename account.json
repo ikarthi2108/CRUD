@@ -1,49 +1,67 @@
 {
   "Account": [
     {
-      "AccNo": "123",
-      "AccHolderName": "kk",
-      "AccType": "jhngf",
-      "Address": "fngf",
-      "Balance": "gf",
+      "AccNo": "123456",
+      "AccHolderName": "Karthikayan",
+      "AccType": "Current",
+      "Address": "3/149 ganapathypalayam,mangalm",
+      "Balance": "50000",
       "AccHolderPhoto": "https://www.melivecode.com/users/1.png",
       "id": 1
     },
     {
-      "AccNo": "",
-      "AccHolderName": "",
-      "AccType": "",
-      "Address": "",
-      "Balance": "",
+      "AccNo": "123123",
+      "AccHolderName": "kannan",
+      "AccType": "Current",
+      "Address": "perundurai,Erorde",
+      "Balance": "10000",
       "AccHolderPhoto": "https://www.melivecode.com/users/1.png",
       "id": 2
     },
     {
-      "AccNo": "",
-      "AccHolderName": "",
-      "AccType": "",
-      "Address": "",
-      "Balance": "",
+      "AccNo": "123321",
+      "AccHolderName": "sameer",
+      "AccType": "Savings",
+      "Address": "Palani,Dindugal",
+      "Balance": "60000",
       "AccHolderPhoto": "https://www.melivecode.com/users/1.png",
       "id": 3
     },
     {
-      "AccNo": "",
-      "AccHolderName": "",
-      "AccType": "",
-      "Address": "",
-      "Balance": "",
+      "AccNo": "123213",
+      "AccHolderName": "Akhil",
+      "AccType": "Savings",
+      "Address": "chennai,Tamilnadu",
+      "Balance": "500000",
       "AccHolderPhoto": "https://www.melivecode.com/users/1.png",
       "id": 4
     },
     {
-      "AccNo": "",
-      "AccHolderName": "",
-      "AccType": "",
-      "Address": "",
-      "Balance": "",
+      "AccNo": "123111",
+      "AccHolderName": "vijay",
+      "AccType": "Savings",
+      "Address": "coimbatore,Tamilnadu",
+      "Balance": "400000",
       "AccHolderPhoto": "https://www.melivecode.com/users/1.png",
       "id": 5
+    },
+    {
+      "AccNo": "123222",
+      "AccHolderName": "Prajeeth",
+      "AccType": "Savings",
+      "Address": "Tirupur,Tamilnadu",
+      "Balance": "80000",
+      "AccHolderPhoto": "https://www.melivecode.com/users/1.png",
+      "id": 6
+    },
+    {
+      "AccNo": "123333",
+      "AccHolderName": "Deepan",
+      "AccType": "Current",
+      "Address": "salem,India",
+      "Balance": "90000",
+      "AccHolderPhoto": "https://www.melivecode.com/users/1.png",
+      "id": 7
     }
   ]
 }
