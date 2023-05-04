@@ -27,11 +27,11 @@ function loadTable() {
           trHTML +=
             '<td><button type="button" class="btn btn-outline-secondary" onclick="showUserEditBox(' +
             object["id"] +
-            ')">Edit</button>';
+            ')"><i class="fa-regular fa-pen-to-square"></i></button>';
           trHTML +=
-            '<button type="button" class="btn btn-outline-danger" onclick="userDelete(' +
+            '<button type="button" class="btn btn-outline-danger ms-2" onclick="userDelete(' +
             object["id"] +
-            ')">Del</button></td>';
+            ')"><i class="fa-solid fa-trash "></i></button></td>';
           trHTML += "</tr>";
         }
         document.getElementById("mytable").innerHTML = trHTML;
