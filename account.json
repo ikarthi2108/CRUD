@@ -1,0 +1,49 @@
+{
+  "Account": [
+    {
+      "AccNo": "123",
+      "AccHolderName": "kk",
+      "AccType": "jhngf",
+      "Address": "fngf",
+      "Balance": "gf",
+      "AccHolderPhoto": "https://www.melivecode.com/users/1.png",
+      "id": 1
+    },
+    {
+      "AccNo": "",
+      "AccHolderName": "",
+      "AccType": "",
+      "Address": "",
+      "Balance": "",
+      "AccHolderPhoto": "https://www.melivecode.com/users/1.png",
+      "id": 2
+    },
+    {
+      "AccNo": "",
+      "AccHolderName": "",
+      "AccType": "",
+      "Address": "",
+      "Balance": "",
+      "AccHolderPhoto": "https://www.melivecode.com/users/1.png",
+      "id": 3
+    },
+    {
+      "AccNo": "",
+      "AccHolderName": "",
+      "AccType": "",
+      "Address": "",
+      "Balance": "",
+      "AccHolderPhoto": "https://www.melivecode.com/users/1.png",
+      "id": 4
+    },
+    {
+      "AccNo": "",
+      "AccHolderName": "",
+      "AccType": "",
+      "Address": "",
+      "Balance": "",
+      "AccHolderPhoto": "https://www.melivecode.com/users/1.png",
+      "id": 5
+    }
+  ]
+}
