@@ -1,12 +1,9 @@
-//https://javascript.info/xmlhttprequest#http-headers
-// npm install -g json-server
-// json-server --watch db.json in Terminal(command prompt)
+//Loadtable function
 function loadTable(AccHolderName = '') {
   const xhttp = new XMLHttpRequest();
   xhttp.open("GET", `http://localhost:3000/Account?AccHolderName_like=${AccHolderName}`);
   xhttp.send();
-  //https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest 
-  //XMLHttpRequest Methods and Properties
+
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       console.log(this.responseText);
@@ -38,14 +35,16 @@ function loadTable(AccHolderName = '') {
     }
   };
 }
-
 loadTable();
+
+ 
+ 
 // searching
 function search() {
   const AccHolderName = document.getElementById("searchvalue").value;
   loadTable(AccHolderName);
 }
-
+//createbox function
 function showUserCreateBox() {
   //https://sweetalert2.github.io/v9.html
   Swal.fire({
@@ -85,7 +84,6 @@ function userCreate() {
             const objects = JSON.parse(this.responseText);
             Swal.fire({
               icon: 'success',
-              title: 'Account created',
               text: objects["message"]
             });
             loadTable();
@@ -105,34 +103,11 @@ function userCreate() {
         );
       }
       reader.readAsDataURL(userImage);
-    } else {
-      xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-          const objects = JSON.parse(this.responseText);
-          Swal.fire({
-            icon: 'success',
-            title: 'Account created',
-            text: objects["message"]
-          });
-          loadTable();
-        }
-      };
-      xhttp.open("POST", "http://localhost:3000/account/");
-      xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-      xhttp.send(
-        JSON.stringify({
-          AccNo: AccNo,
-          AccHolderName: AccHolderName,
-          AccType: AccType,
-          Address: Address,
-          Balance: Balance,
-        })
-      );
+    } 
     }
   }
-}
 
-
+//Editbox function
 function showUserEditBox(id) {
   console.log(id);
   const xhttp = new XMLHttpRequest();
@@ -174,7 +149,7 @@ function showUserEditBox(id) {
     }
   };
 }
-
+//usededit function
 function userEdit(id) {
   const AccNo = document.getElementById("AccNo").value;
   const AccHolderName = document.getElementById("AccHolderName").value;
@@ -214,31 +189,11 @@ function userEdit(id) {
         );
       }
       reader.readAsDataURL(userInput.files[0]);
-    } else {
-      xhttp.open("PUT", `http://localhost:3000/Account/${id}`);
-      xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-      xhttp.send(
-        JSON.stringify({
-          AccNo: AccNo,
-          AccHolderName: AccHolderName,
-          AccType: AccType,
-          Address: Address,
-          Balance: Balance,
-          AccHolderPhoto: null,
-        })
-      );
-      xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-          const objects = JSON.parse(this.responseText);
-          Swal.fire(objects["message"]);
-          loadTable();
-        }
-      };
+    } 
     }
   }
-}
 
-
+//delete operation
 function userDelete(id) {
   console.log(id);
   const xhttp = new XMLHttpRequest();
@@ -267,6 +222,7 @@ function userDelete(id) {
     }
   });
 }
+//validating function
 function validate() {
   const AccNo = document.getElementById("AccNo").value;
   const AccHolderName = document.getElementById("AccHolderName").value;

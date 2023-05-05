@@ -1,3 +1,8 @@
+h2 {
+  color: #000305;
+  font-family: sans-serif;
+  border: #000000;
+}
 .bg-mynav {
   background-color: #000000;
 }
@@ -15,8 +20,3 @@ td {
   color: #000307;
 }
 
-h2 {
-  color: #000305;
-  font-family: sans-serif;
-  border: #000000;
-}
