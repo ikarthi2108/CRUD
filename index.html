@@ -1,44 +1,56 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>CRUD FROM API</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
-    <link href="index.css" rel="stylesheet">
-  </head>
-  <body>
+  <title>CRUD FROM API</title>
 
-    <nav class="navbar navbar-dark bg-mynav">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="assests/logo-CG.png"></a>
+  <link href="index.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-dark bg-mynav">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="assests/logo-CG.png"></a>
+      <div id="search">
+        <i class="fas fa-search  text-white"></i>
+
+        <input id="searchvalue" class="ms-auto" type="text" placeholder="Search by AccountHolderName"
+          onkeyup="search()">
       </div>
-    </nav>
-    <div class="container">
-      <div class="d-flex bd-highlight mb-3">
-        <div class="me-auto p-2 bd-highlight"><h2>CG Bank</div>
-        <div class="p-2 bd-highlight">
-          <button type="button" class="btn btn-primary" onclick="showUserCreateBox()">Add person</button>
-        </div>
+
+    </div>
+  </nav>
+  <div class="container">
+    <div class="d-flex bd-highlight mb-3">
+      <div class="me-auto p-2 bd-highlight">
+        <h2><i>CG Bank Account Details</i></h2>
       </div>
-      
+      <div class="p-2 bd-highlight">
+        <button type="button" class="btn btn-primary" onclick="showUserCreateBox()">Add person</button>
+      </div>
+    </div>
+    <div id="bg">
       <div class="table-responsive">
         <table class="table">
           <thead>
             <tr>
-              <th scope="col">#</th>
-              <th scope="col">AccHolderPhoto</th>
-              <th scope="col">Accno</th>
-              <th scope="col">AccHolderName</th>
-              <th scope="col">AccType</th>
-              <th scope="col">Address</th>
-              <th scope="col">Balance</th>
-              <th scope="col">Action</th>
+              <th scope="col"><i>SI NO</i></th>
+              <th scope="col"><i>AccHolderPhoto</i></th>
+              <th scope="col"><i>Accno</i></th>
+              <th scope="col"><i>AccHolderName</i></th>
+              <th scope="col"><i>AccType</i></th>
+              <th scope="col"><i>Address</i></th>
+              <th scope="col"><i>Balance</i></th>
+              <th scope="col"><i>Action</i></th>
             </tr>
           </thead>
           <tbody id="mytable">
@@ -49,9 +61,13 @@
         </table>
       </div>
     </div>
-    <script src="https://kit.fontawesome.com/d509f79d02.js" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-  </body>
+  </div>
+  <script src="https://kit.fontawesome.com/d509f79d02.js" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>

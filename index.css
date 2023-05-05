@@ -1,18 +1,22 @@
 .bg-mynav {
-    background-color: #2077ce;
-  }
-  
-  body {
-    font-size: 1.25rem;
-    background-color: #f6f8fa;
+  background-color: #000000;
+}
 
-    
-  }
-  
-  td {
-    line-height: 3rem;
-  }
-  #acc{
-    background-image: url(assests/bg5.jpg);
-  }
-  
+body {
+  font-size: 1.25rem;
+  background-color: #ebe7de;
+}
+
+td {
+  line-height: 3rem;
+}
+
+.table {
+  color: #000307;
+}
+
+h2 {
+  color: #000305;
+  font-family: sans-serif;
+  border: #000000;
+}
